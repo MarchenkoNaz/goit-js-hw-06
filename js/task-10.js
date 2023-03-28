@@ -14,6 +14,7 @@ btnDestroy.addEventListener('click', Destroy)
 
 
 function Create() {
+	bodyDiv.innerHTML = ''
 	let size = 30
 	const divBoxArr = []
 
