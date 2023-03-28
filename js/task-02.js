@@ -9,12 +9,12 @@ const ingredients = [
 
 const list = document.getElementById("ingredients")
 
-let listElement;
+
 
 ingredients.forEach(element => {
-	listElement = document.createElement("li")
+	const listElement = document.createElement("li")
 	listElement.textContent = element
 	listElement.className = "item"
-	list.appendChild(listElement)
+	list.append(listElement)
 })
 

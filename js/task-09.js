@@ -9,6 +9,6 @@ const btnChangerColor = document.querySelector(".change-color")
 
 btnChangerColor.addEventListener('click', () => {
 	spanColor.textContent = changerColor()
-	body.style.backgroundColor = changerColor()
+	body.style.backgroundColor = spanColor.textContent
 
 })

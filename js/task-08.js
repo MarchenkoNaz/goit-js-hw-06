@@ -2,8 +2,7 @@
 const form = document.querySelector('.login-form')
 const inputEmail = document.querySelector("input[type=email]")
 const inputPassword = document.querySelector("input[type=password]")
-console.dir(inputEmail);
-console.dir(inputPassword);
+
 form.addEventListener("submit", (event) => {
 	event.preventDefault()
 	if (inputEmail.value === "") {
@@ -12,12 +11,13 @@ form.addEventListener("submit", (event) => {
 		alert("For login into your account you need to enter your  password")
 	} else {
 		alert("Everything is okay! You can log in")
-		// Поясніть будь-ласка як працює цей кусочок коду, не до кінця розумію. Це типу ми створюємо новий об'єкт в який записуємо значення елементів input?
-		//        \/
-		const { elements: {
-			email, password }
-		} = event.currentTarget;
-		console.log("Email :", email.value, "Password :", password.value);
+
+		const { email, password } = event.currentTarget.elements;
+		const user = {
+			email: email.value,
+			password: password.value
+		}
+		console.log(user);
 		form.reset()
 	}
 
