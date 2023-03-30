@@ -9,12 +9,13 @@ const ingredients = [
 
 const list = document.getElementById("ingredients")
 
-
+const listArr = []
 
 ingredients.forEach(element => {
 	const listElement = document.createElement("li")
 	listElement.textContent = element
 	listElement.className = "item"
-	list.append(listElement)
+	listArr.push(listElement)
 })
 
+list.append(...listArr)
